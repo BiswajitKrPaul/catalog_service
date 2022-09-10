@@ -19,7 +19,7 @@ public class LoggingFilterMiddleware extends OncePerRequestFilter {
         long startTime = System.currentTimeMillis();
         filterChain.doFilter(request, response);
         long timeTaken = System.currentTimeMillis() - startTime;
-        log.info("{}  {} , Time Taken : {}ms", request.getMethod(), request.getRequestURI(),
+        log.info("{}  {} TimeTaken : {}ms", request.getMethod(), request.getRequestURI(),
                 timeTaken);
     }
 }

@@ -12,14 +12,14 @@ import tech.biswajit.catalog_service.data.ProductCategories;
 import tech.biswajit.catalog_service.dto.ProductCategoriesPaginatedResponseListDTO;
 import tech.biswajit.catalog_service.dto.ProductCategoriesRequestDTO;
 import tech.biswajit.catalog_service.dto.ProductCategoriesResponseDTO;
-import tech.biswajit.catalog_service.service.ProductCategoriesServiceImpl;
+import tech.biswajit.catalog_service.service.ProductCategoriesService;
 
 @RestController
 @RequestMapping("/v1/categories")
 public class ProductCategoriesController {
 
     @Autowired
-    private ProductCategoriesServiceImpl productCategoriesServiceImpl;
+    private ProductCategoriesService productCategoriesServiceImpl;
 
     @PostMapping()
     public ProductCategoriesResponseDTO saveProductCategories(
